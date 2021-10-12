@@ -1,0 +1,510 @@
+*{
+    margin: 0px;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+}
+
+div.top-header{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+header div.top-header p{
+    /* saco el width porque en tablet y mas ocupa demasiado espacio
+    width: 100%;*/
+    text-align: center;
+    /* saco el margin-top para que quede centrado en el cross axis
+    margin-top: 10px;*/
+} 
+
+header{
+    background-color: #EAC926;
+}
+
+/* 10/10/2021 8:27 saco esto para probar si el header se organiza mejor
+No, desaparece el logo
+lo dejo asi por ahora y volvere a verlo mas adelante si tengo tiempo*/
+/* pruebo separando header div.logo 25% y header .form 50%*/
+header div.logo{
+    width: 25%;
+    padding: 10px;
+}
+
+header .form{
+    width: 50%;
+}
+
+    
+
+header .form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+header nav{
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* para que quede mas separado del margen inferior */
+    padding-bottom: 10px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+/* clases y estilos ahora que la barra de navegacion fuera un form*/
+header form input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header form .submit{
+    background-color: #FFF;
+    border: 1px solid #000;
+    /*color: #666; en el mockup el colo es negro*/
+    color: black;
+    /* saco para que el recuadro de la lupa quede mas ajustado
+    width: 10%;*/
+    /* para que el recuadro de la lupa tenga el mismo tamaño
+    que la barra*/
+    padding: 2px;
+    /* para que la lupa quede separada de la barra*/
+    position: relative;
+    right: -5px;
+ }
+
+ 
+/* una parte copiada de w3*/
+
+.search-container input[type=text] {
+    padding: 6px;
+    font-size: 14px;
+    width: 75%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+  
+.search-container form button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: #FFF;
+    color: #666;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+div.last-visit,
+div.offers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+/* este es el camioncito*/
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transform:rotate(0deg); /* aca va el estado inicial*/
+    transition-property: transform;
+    transition-duration: 0.5s;
+    
+}
+
+
+main section article i:hover {
+    transform:rotate(-90deg); /* aca va el estado final*/
+  }
+
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+/* Micro desafío - code review  Clase 16 
+   solo muestra la descripcion si se pasa el mouse
+   por encima de main-article */
+/* seleccion descendente. necesito modificar una propiedad de la descripcion
+que inicialmente no se ve*/
+
+article div.main-article:hover .description{
+    opacity: 1;
+}
+
+
+/* Micro desafío - code review 
+Clase 12 Pie de página
+El contenido de todos los artículos está centrado.
+Los íconos tienen un tamaño de 2em y un margen inferior 
+de separación de 10 píxeles.*/
+
+
+footer {
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    color: #666;
+}
+
+footer h3 {
+    font-size: 18px;
+}
+
+p#Copyright {
+    font-size: 12px;
+}
+
+footer i{
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* PRUEBO USAR UN SOLO ARCHIVO STYLES.CSS PARA MANTENER LAS MODIFICACIONES
+QUE LE HAGA AL ENCABEZADO. ESPERO QUE SALGA BIEN!*/
+/* Estilos del register.html*/
+.register,
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    max-width: 360px;
+    background-color: #d8d7d7;;
+    padding: 10px;
+}
+
+.inputRegister {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.inputRegister input{
+    height: 20px;
+    padding-left: 5px;
+    border: none;
+}
+
+.inputRegister .profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.inputRegister .interests {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+}
+
+.inputRegister .interests div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;    
+}
+
+.inputRegister .interests div input#a,
+.inputRegister .interests div input#b,
+.inputRegister .interests div input#c,
+.inputRegister .interests div input#d,
+.inputRegister .interests div input#e,
+.inputRegister .interests div label{
+    margin: 10px;
+}
+
+.inputRegister h4{
+    margin-bottom: 5px;
+}
+
+/* no logre separarlo del titulo de otra manera*/
+.inputRegister input#birth_date{
+    margin-top: 5px;
+}
+
+.inputRegister input.w80,
+.inputRegister input#birth_date{
+    width: 80%
+}
+
+.inputRegister input.w100{
+    width: 100%
+}
+
+.botonAzul {
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+    font-weight:500;
+    color: white;
+    background-color: #1259c3;
+    border:none;
+    border-radius: 10px
+}
+
+/*Micro desafío - Paso 2 Clase 16*/
+/*el color de fondo del botón de envío del formulario login
+  cambia cuando se pasa el mouse por encima */
+.botonLogin:hover {
+    background-color: #0022AA;
+}
+
+.unElementoFooter{
+   margin: 10px;
+}
+
+
+/* BREAKPOINTS que ya venian en styles.css de Solution Day 5
+   Mobil hasta 360
+   Tablet 361 a 768
+   Desktop 769 y más*/
+
+/* Micro desafío - code review Clase 13 sección del Header:
+   Versión mobile, ocultar el site y el login navbar.
+   Versiones desktop y tablet mostrar el site y login navbar, 
+   pero ocultar la imagen del menú hamburguesa.
+   No sé qué es el site!
+*/
+
+/* Micro desafío - code review Clase 14 
+Para dispositivos con resoluciones igual o superior a una tablet, 
+(aca el breakpoint es 361)
+el header debe verse:
+- navbar todo en una linea
+- los 4 primeros alineados a margen izquierdo y los ultimos 4 alineados a margen derecho
+- La leyenda "Compra en cuotas.." queda en la misma linea que la barra de busqueda y el logo
+*/
+
+
+@media (max-width: 360px){
+    header nav {
+        display: none;
+    }
+}
+
+@media (min-width: 361px){
+
+    /*Micro desafío - code review Clase 13*/
+    div.burger-menu i{
+        display: none;
+    }
+
+    /*Micro desafío - code review Clase 14*/
+    header nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* sin padding quedan todos pegados
+        padding: 10px;   no va aca, va en las li (espero!) */ 
+    }
+
+    header nav ul li {
+        /* sin padding los elementos quedan todos pegados */
+        padding: 10px;    
+    }
+
+    /* Para que "Compra en cuotas.." quede en la misma linea que 
+       la barra de busqueda y el logo */
+    header div.top-header{
+        /* top-header ya tiene display:flex en la linea 20.
+        creo que lo repito para no olvidar que esta */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* pruebo con esto. cuando lo desmarque fue a la misma linea
+        que el logo y la barra de busqueda*/
+        flex-wrap: initial;
+        /* para que los tres elementos quedes centrados en cross axis */
+        align-items: center;
+    }
+
+    
+    /* Micro desafio Clase 16 
+    /* que la descripción del producto esté oculta, a menos que los usuarios
+le pasen el mouse por arriba*/
+/* lo hacemos con opacity para que las tarjetas no muestren un efecto como si 
+saltaran cuando aparece y desaparece la descripcion 
+  Eso es una mala practica! Oh!*/
+    main section article .description{
+        display: initial;
+        opacity: 0;
+    }
+
+    /* asi estaba al comienzo cuando al sombra se veia siempre*/
+   /* main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }*/
+
+    main section article:hover{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    /*para tablet aplicando Flexbox, solo se veran dos artículos */
+
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+
+    /*para la versión desktop, aplicando Flexbox,
+      solo se ven cuatro artículos */
+
+    main section div.products article{
+        width: 22%;
+    }
+
+    footer .elementos-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer p#Copyright{
+        text-align: left;
+        /*padding-left: 15px;*/
+        margin-left: 30px;
+    }
+
+    footer .unElementoFooter i:hover{
+        color: #0022AA;
+    }
+}
+
+/* Fin, por fin!*/
